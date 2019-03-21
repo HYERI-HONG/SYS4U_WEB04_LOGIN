@@ -1,47 +1,41 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<div id = "header" style="border-bottom: double;height: 60px;">
+<div class = "header">
 	<jsp:include page="/WEB-INF/view/common/header.jsp" />
 </div>
-<div id="content">
+<div class="content">
 	<div id="content_detail">
 		<h3>사원 정보 조회</h3>
 		<table id="empInfo">
 			<tr>
-				<td>사원 번호</td>
+				<th>사원 번호</th>
 				<td>${employee.empno}</td>
-				<td>이 름</td>
+				<th>이 름</th>
 				<td>${employee.ename}</td>
 			</tr>
 
 			<tr>
-				<td>직 책</td>
+				<th>직 책</th>
 				<td>${employee.job}</td>
-				<td>부 서</td>
+				<th>부 서</th>
 				<td>${employee.deptno}</td>
 			</tr>
 
 			<tr>
-				<td>직속 상관</td>
+				<th>직속 상관</th>
 				<td>${employee.mgr}</td>
-				<td>입사 날짜</td>
+				<th>입사 날짜</th>
 				<td>${employee.hiredate}</td>
 			</tr>
 
 			<tr>
-				<td>연 봉</td>
+				<th>연 봉</th>
 				<td>${employee.sal}</td>
-				<td>상 여 금</td>
+				<th>상 여 금</th>
 				<td>${employee.comm}</td>
 			</tr>
-			<tr>
-				<td><input type="button" value="사원 정보 수정"
-					onclick="javascript:location.href='${context}/authority/move.do?pageName=empUpdate&empno=${employee.empno}';" />
-				</td>
-				<td colspan="2"><input type="button" value="사원 목록으로 돌아가기"
-					onclick="javascript:location.href='${context}/empList.do';">
-				</td>
-			</tr>
 		</table>
+		<input type="button" value="수정 하기" id="detail_modify" onclick="javascript:location.href='${context}/authority/move.do?pageName=empUpdate&empno=${employee.empno}';" />
+		<input type="button" value="목록 보기" onclick="javascript:location.href='${context}/empList.do';" id="detail_golist">
 	</div>
 </div>

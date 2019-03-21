@@ -7,26 +7,26 @@
 	
 %>
 <script type="text/javascript" src="${context}/resources/js/emp/empList.js"></script>
-<body style="background-color: #f8f4e2;">
-<div id = "header" style="border-bottom:double; height: 60px;background-color: #318174;color: white; padding-top: 10px;">
+<body>
+<div class ="header">
 	<jsp:include page="/WEB-INF/view/common/header.jsp" />
 </div>
-<div id="content" style="margin-left: 50px;"> 
+<div class="content"> 
 	<h3>사원 목록</h3>
 	<div id="content_search">
-		<form name="searchForm" style="display: inline;">
+		<form name="searchForm" id = "searchForm">
 			<select name="searchOption">
 				<option value="empno" <%=(searchOption.equals("empno"))? "selected":"" %>>사원번호</option>
 				<option value="ename" <%=(searchOption.equals("ename"))? "selected":"" %> >이름</option>
 				<option value="dname" <%=(searchOption.equals("dname"))? "selected":"" %>>부서명</option>
 			</select> 
 			<input name="searchWord" type="text" placeholder="검색어 입력" value="<%=searchWord%>" /> 
-			<input type="button" id="searchButton" value="검색" style="background-color: beige;" />
+			<input type="button" id="searchButton" value="검색" />
 		</form>
 		<input id="context" type="hidden" value="${context}" /> 
-		<input id="addBtn" type="button" value="사원 등록" style="background-color: beige;"/>
+		<input id="addBtn" type="button" value="사원 등록"/>
 	</div>
-	<hr style="width:40%; float:left;"/>
+	<hr class="empList_hr"/>
 	<br>
 	<div id="content_list">	
 		<table id="employee_list">
@@ -38,7 +38,7 @@
 			</tr>
 			<c:forEach items='${list}' var='employee'>
 				<tr>
-					<td><a href="${context}/empDetail.do?empno=${employee.empno}" class="empno" style="text-decoration: none; color: black;">${employee.empno}</a></td>
+					<td><a href="${context}/empDetail.do?empno=${employee.empno}" class="empnoClick">${employee.empno}</a></td>
 					<td>${employee.ename}</td>
 					<td>${employee.hiredate}</td>
 					<td>${employee.dname}</td>
@@ -47,7 +47,7 @@
 		</table>
 		</div>
 		<br>
-		<hr style="width:40%; float:left;"/>
+		<hr class="empList_hr"/>
 		<br>
 		<div id="content_pagination">
 			<jsp:include page="/WEB-INF/view/common/pagination.jsp">

@@ -2,12 +2,13 @@
 	pageEncoding="UTF-8"%>
 <script type="text/javascript"
 	src="${context}/resources/js/emp/empAddUpdate.js"></script>
-<div id = "header" style="border-bottom: double;height: 60px;">
+<div class = "header">
 	<jsp:include page="/WEB-INF/view/common/header.jsp" />
 </div>
-<div id="content">
+<div class ="content">
 	<div id="content_update">
 		<h3>${formName}</h3>
+		<hr class="empList_hr"/><br>
 		<form id="${formType}Form" name="${formType}Form">
 			<table>
 				<tr>
@@ -53,12 +54,13 @@
 				<tr>
 					<td colspan="3">
 					<td>
-					<td><input id="${formType}FormBtn" type="button" value="확인" />
+					<td><input id="${formType}FormBtn" type="button" value="확인" class="btn"/>
 						<input type="button" onclick="javascript:history.back();"
-						value="취소"></td>
+						value="취소" class="btn"></td>
 				</tr>
 			</table>
 		</form>
+		<hr class="empList_hr"/>
 	</div>
 </div>
 <script>

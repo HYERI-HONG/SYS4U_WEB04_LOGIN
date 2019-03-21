@@ -14,8 +14,8 @@ var empManager = (()=>{
 				}else{
 					var xhr = new XMLHttpRequest();
 					xhr.onreadystatechange = function() {
-
 						if (this.status === 200 && this.readyState === 4) {
+							
 							if(this.responseText==='NoExists'){
 								alert("존재하지 않는 아이디, 비밀번호입니다.");
 							}else if(this.responseText==='WRONG'){

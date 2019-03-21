@@ -1,10 +1,89 @@
 @charset "UTF-8";
 
-table {
-	width: 50%;
-	border: 1px solid #444444;
+
+/*common*/
+body{
+	
+	background-color: #f8f4e2;
+}
+.btn{
+	background-color: beige;
+}
+.content{
+	margin-left: 50px;
 }
 
-th, td {
-	border: 1px solid #444444;
+
+/*header*/
+#employee_list{
+	width: 35%;
+	text-align: center;
 }
+.header{
+	border-bottom:double; 
+	height: 60px;
+	background-color: #318174;
+	color: white; 
+	padding-top: 10px;
+}
+
+.header_input{
+	background-color: beige
+}
+
+.header h1 {
+	display: inline; 
+	margin-right: 200px;
+	margin-left: 50px;
+}
+
+/*empList*/
+#searchForm{
+	display: inline;
+	
+}
+
+.empList_hr{
+	width:700px; 
+	float:left;
+}
+
+.empnoClick{
+	text-decoration: none; 
+	color: black;
+}
+
+#searchButton{
+	background-color: beige;
+}
+#addBtn{
+	background-color: beige;
+}
+
+/*empDetail*/
+#detail_modify{
+	background-color: beige;
+	margin-left: 350px;
+    margin-top: 10px;
+}
+#detail_golist{
+	background-color: beige;
+	margin-top: 10px;
+}
+
+#empInfo{
+	width: 500px;
+    text-align: center;
+    border: 1px solid #7f7f7f;
+}
+#empInfo tr th {
+	border: 1px solid #7f7f7f;
+    background-color: #f0e8c1;
+}
+#empInfo tr td {
+	border: 1px solid #7f7f7f;
+	 background-color: #f0e8c1;
+}
+
+
+
