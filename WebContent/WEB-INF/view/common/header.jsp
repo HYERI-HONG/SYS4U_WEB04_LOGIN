@@ -1,12 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%><% 
 	String userid = (String)request.getSession().getAttribute("userid");%>
-<script type="text/javascript" src="${context}/resources/js/common/header.js"></script>
-<link rel="stylesheet" href="${css}/style.css"/>
+<head>
 
+	<script type="text/javascript" src="${js}/common/header.js"></script>
+	<script type="text/javascript" src="${js}/emp/empAddUpdate.js"></script>
+	<script type="text/javascript" src="${js}/emp/empList.js"></script>
+	<link rel="stylesheet" href="${css}/style.css"/>
+	
+</head>
 <h1>EMP</h1>
-
-<div id="loginHeader" style="display: <%=(userid==null)? "inline" : "none" %>;">
+<div id="loginBox" style="display: <%=(userid==null)? "inline" : "none" %>;">
 	<form style="display: inline;" name="loginForm" id="loginForm">
 		<label for="id">ID : </label> 
 		<input type="text" name="id" id="id"> 
@@ -20,8 +24,6 @@
 	<h3 style="display: inline;"><%=userid%>님 환영합니다.</h3>
 	<input type="button" id="logoutBtn" value="로그아웃" class="header_input"> 
 </div>
-
-
 <script>
 	empManager.logManager('${context}');
 </script>

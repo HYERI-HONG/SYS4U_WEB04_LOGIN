@@ -3,6 +3,7 @@
 		
 		var context = doc.getElementById('context').value;
 	
+		//URL에서 원하는 파라메터값
 		var getParameter = function (name){
 			   if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(global.location.search)) {
 				   return decodeURIComponent(name[1]);

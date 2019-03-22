@@ -6,8 +6,7 @@
 	String searchWord = (String)request.getAttribute("searchWord");
 	
 %>
-<script type="text/javascript" src="${context}/resources/js/emp/empList.js"></script>
-<body>
+
 <div class ="header">
 	<jsp:include page="/WEB-INF/view/common/header.jsp" />
 </div>
@@ -55,4 +54,3 @@
 			</jsp:include>
 		</div>
 </div>
-</body>

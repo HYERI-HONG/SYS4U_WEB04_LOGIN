@@ -42,6 +42,9 @@ body{
 	display: inline;
 	
 }
+#content_list {
+	height: 100px;
+}
 
 .empList_hr{
 	width:700px; 
@@ -78,11 +81,16 @@ body{
 }
 #empInfo tr th {
 	border: 1px solid #7f7f7f;
-    background-color: #f0e8c1;
+    background-color: white;
 }
 #empInfo tr td {
 	border: 1px solid #7f7f7f;
-	 background-color: #f0e8c1;
+	 background-color: white;
+}
+
+/*empDetail*/
+#duplCheckBtn {
+	background-color: beige;
 }
 
 

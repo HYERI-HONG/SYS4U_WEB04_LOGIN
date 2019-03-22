@@ -8,7 +8,6 @@ var empManager = (()=>{
 				var id = loginForm.id.value;
 				var pw = loginForm.password.value;
 				
-				
 				if(id===''||pw===''){
 					alert("아이디, 비밀번호를 입력하세요.");
 				}else{
@@ -16,15 +15,16 @@ var empManager = (()=>{
 					xhr.onreadystatechange = function() {
 						if (this.status === 200 && this.readyState === 4) {
 							
-							if(this.responseText==='NoExists'){
-								alert("존재하지 않는 아이디, 비밀번호입니다.");
-							}else if(this.responseText==='WRONG'){
-								alert("아이디와 비밀번호가 일치하지 않습니다.")
-							}else{
-								alert("로그인되었습니다.")
-								location.href = x+"/empList.do"
+							var responseMessage = this.responseText;
+							if(responseMessage==='SUCCESS'){
+								responseMessage = "로그인 되었습니다.";
+								history.go(0);
 							}
+							alert(responseMessage);
+							
 						}
+					
+							
 					}
 					xhr.open("POST", x+"/empLogin.do", true);
 					xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");

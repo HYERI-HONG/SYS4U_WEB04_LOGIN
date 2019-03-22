@@ -18,7 +18,7 @@
 				<th>직 책</th>
 				<td>${employee.job}</td>
 				<th>부 서</th>
-				<td>${employee.deptno}</td>
+				<td>${employee.dname}</td>
 			</tr>
 
 			<tr>

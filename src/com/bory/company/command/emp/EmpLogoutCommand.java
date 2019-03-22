@@ -12,7 +12,9 @@ public class EmpLogoutCommand extends AbstractCommand {
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 		
 		request.getSession().removeAttribute("userid");
-		request.setAttribute("redirectUrl", "/company/empList.do");
+		
+		//검색시 검색어를 URL로 보내지 않기 때문에 저장되지 않는다. 
+		request.setAttribute("redirectUrl", request.getHeader("referer"));
 		request.setAttribute("message", "로그아웃 되었습니다.");
 		
 		return Constants.REDIRECT_VIEW;
